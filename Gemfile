@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.3.1'
+ruby '2.5.3'
 
 gem 'faker', '>= 1.6.1'
 gem 'pg', '>= 0.18', '< 2.0'
