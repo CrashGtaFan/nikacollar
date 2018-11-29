@@ -1,0 +1,9 @@
+ul#mobile-demo.sidenav
+  li= link_to 'Ассортимент', '/products'
+  li= link_to 'Качество', '/quality'
+  li= link_to 'Товары', '/contacts'
+  - if current_user
+    li= link_to 'Выйти', log_out_path
+  - else
+    li= link_to 'Регистрация', registration_path
+    li= link_to 'Войти', log_in_path

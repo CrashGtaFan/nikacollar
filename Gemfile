@@ -3,13 +3,15 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.3'
 
-gem 'activeadmin'
+gem 'rails_admin', '~> 1.3'
 gem 'faker', '>= 1.6.1'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.2.1'
+gem 'font-awesome-rails'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 
 gem 'bcrypt', '~> 3.1.7'
 gem 'coffee-rails', '~> 4.2'

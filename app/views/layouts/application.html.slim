@@ -1,12 +1,21 @@
 doctype html
 html
   head
-    title
-      | Nikacollar
+    title Nikacollar
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+    link href="http://allfont.ru/allfont.css?fonts=lucida-sans-unicode" rel="stylesheet" type="text/css"
+    link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" /
+    link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" /
   body
     .container
-      = yield
+      .row
+        = render 'partials/header'
+        = render 'partials/mobile_header'
+      main
+        = yield
+        footer.page-footer.orange.darken-3
+          = render 'partials/footer'

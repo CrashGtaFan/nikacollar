@@ -1,0 +1,18 @@
+nav.deep-orange.darken-4
+  .container
+    .nav-wrapper
+      = link_to 'Nika', root_path, class: 'brand-logo'
+      a.sidenav-trigger data-target="mobile-demo" href=""
+        i.material-icons menu
+      .menu-items
+        ul.menu-items.hide-on-med-and-down
+          li= link_to 'Ассортимент', products_path
+          li= link_to 'Качество', quality_path
+          li= link_to 'Товары', contacts_path
+      ul.right.hide-on-med-and-down
+        - if current_user
+          li= link_to current_user.email, current_user
+          li= link_to 'Выйти', log_out_path
+        - else
+          li= link_to 'Регистрация', registration_path
+          li= link_to 'Войти', log_in_path

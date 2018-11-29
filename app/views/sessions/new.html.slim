@@ -1,0 +1,17 @@
+h1 Log in!
+- if flash[:notice]
+  .row
+    .col.s6
+      = flash[:notice]
+.row
+  .col.s6
+    = form_tag sessions_path do
+      = label_tag :email
+      br
+      = email_field_tag :email, nil, class: "form-control", required: true
+      br
+      = label_tag :password
+      br
+      = password_field_tag :password, nil, class: "form-control", required: true
+      br
+      = submit_tag 'Log in', class: "waves-effect waves-light btn"
